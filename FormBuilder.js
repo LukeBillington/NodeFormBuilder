@@ -1,3 +1,5 @@
+// TODO: Prepare for version 1.1
+
 // Main function to build the complete form
 exports = module.exports = {};
 
