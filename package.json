@@ -1,0 +1,10 @@
+{
+  "name": "NodeFormBuilder",
+  "version": "1.0.0",
+  "description": "A quick and basic way to generate dynamic forms in HTML with Node.",
+  "main": "FormBuilder.js",
+  "repository": "https://github.com/LukeBillington/NodeFormBuilder.git",
+  "author": "Luke Billington <lukecreative@me.com>",
+  "license": "MIT",
+  "private": false
+}
