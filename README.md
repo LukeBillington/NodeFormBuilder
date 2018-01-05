@@ -11,7 +11,7 @@ Currently only provides basic support for 'text', 'email', 'password', 'hidden',
 
 ```javascript
 
-  let FormBuilder = require('./FormBuilder.js');
+  const FormBuilder = require('./FormBuilder.js');
 
   let inputs = [
     { name: 'name', type: 'text', label: 'Name' },
@@ -20,7 +20,8 @@ Currently only provides basic support for 'text', 'email', 'password', 'hidden',
     { name: 'csrf', type: 'hidden', value: 'wgPbQMS_fJL@RO6ZTwc-nmS1$1a7R9L(' },
     { type: 'submit', value: 'Send Form' }
   ];
-  FormBuilder.buildForm(inputs, 'example.com', 'POST');
+  let form = FormBuilder.buildForm(inputs, 'example.com', 'POST');
+  console.log(form);
 ```
 
 ### Creating a form

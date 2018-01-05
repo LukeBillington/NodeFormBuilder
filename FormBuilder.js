@@ -23,7 +23,7 @@ exports.buildForm = (inputs, action = false, method = 'GET') => {
   }
 
   outputString += '</form>';
-  console.log(outputString);
+  return outputString;
 }
 
 // Factory for building different input types
@@ -38,7 +38,7 @@ let inputFactory = (input) => {
   if(input.type && acceptedInputTypes.includes(input.type)) {
 
     // Route input types to correct build method
-    switch(input.type) {
+    switch(input.type.toLowerCase()) {
 
       case 'select':
         return buildSelect(input);
@@ -133,7 +133,7 @@ let buildInput = (input) => {
 
 }
 
-// Error messages
+// Error message template
 let error = (message, value) => {
-  throw new Error(`FormBuilder - ${message}\nValue:\n${value}`);
+  throw new Error(`FormBuilder - ${message}\nYour input:\n${value}`);
 }
