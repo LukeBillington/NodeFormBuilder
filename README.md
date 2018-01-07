@@ -4,10 +4,10 @@ Currently only provides basic support for 'text', 'email', 'password', 'hidden',
 
 ## Usage (Production)
 **Production build only, see contributing for development instructions.**
-+ Ensure you have Node/NPM installed and clone this repo and cd into it.
-+ Run `npm install --production`.
-+ In your project, be sure to import FormBuilder. `let FormBuilder = require('./FormBuilder.js');`
-+ Use the buildForm method outlined below to create your form.
+1. Ensure you have Node/NPM installed and clone this repo and cd into it.
+2. Run `npm install --production`.
+3. In your project, be sure to import FormBuilder. `let FormBuilder = require('./FormBuilder.js');`
+4. Use the buildForm method outlined below to create your form.
 
 ### Example
 
