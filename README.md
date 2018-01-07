@@ -2,26 +2,27 @@
 A quick and basic way to generate dynamic forms in HTML with Node.
 Currently only provides basic support for 'text', 'email', 'password', 'hidden', 'select', 'label', 'reset', and 'submit', elements, and renders the html string to the console.
 
-## Usage
-+ Ensure you have Node installed and clone this repo.
+## Usage (Production)
+**Production build only, see contributing for development instructions.**
++ Ensure you have Node/NPM installed and clone this repo and cd into it.
++ Run `npm install --production`.
 + In your project, be sure to import FormBuilder. `let FormBuilder = require('./FormBuilder.js');`
 + Use the buildForm method outlined below to create your form.
 
 ### Example
 
 ```javascript
+const FormBuilder = require('./FormBuilder.js');
 
-  const FormBuilder = require('./FormBuilder.js');
-
-  let inputs = [
-    { name: 'name', type: 'text', label: 'Name' },
-    { name: 'email', type: 'email', label: 'Email' },
-    { name: 'password', type: 'password', label: 'Password' },
-    { name: 'csrf', type: 'hidden', value: 'wgPbQMS_fJL@RO6ZTwc-nmS1$1a7R9L(' },
-    { type: 'submit', value: 'Send Form' }
-  ];
-  let form = FormBuilder.buildForm(inputs, 'example.com', 'POST');
-  console.log(form);
+const inputs = [
+  { name: 'name', type: 'text', label: 'Name' },
+  { name: 'email', type: 'email', label: 'Email' },
+  { name: 'password', type: 'password', label: 'Password' },
+  { name: 'csrf', type: 'hidden', value: 'wgPbQMS_fJL@RO6ZTwc-nmS1$1a7R9L(' },
+  { type: 'submit', value: 'Send Form' },
+];
+const form = FormBuilder.buildForm(inputs, 'example.com', 'POST');
+console.log(form);
 ```
 
 ### Creating a form
@@ -53,7 +54,7 @@ Value must be `text`, `email`, `password`, or `hidden`.
     name: 'firstName',
     type: 'text',
     value: 'Luke',
-    label: 'First Name'
+    label: 'First Name',
   }
 ```
 
@@ -84,18 +85,18 @@ Value must be `text`, `email`, `password`, or `hidden`.
     options: [
       {
         value: 'red',
-        label: 'Red'
+        label: 'Red',
       },
       {
         value: 'yellow',
-        label: 'Yellow'
+        label: 'Yellow',
       },
       {
         value: 'blue',
-        label: 'Blue'
+        label: 'Blue',
       }
     ],
-    label: 'Colors'
+    label: 'Colors',
   }
 ```
 
@@ -122,7 +123,7 @@ Value must be `text`, `email`, `password`, or `hidden`.
 ```javascript
   {
     type: 'label',
-    value: 'Some random label!'
+    value: 'Some random label!',
   }
 ```
 
@@ -143,7 +144,7 @@ Value must be `reset` or `submit`.
 ```javascript
   {
     type: 'reset',
-    value: 'Reset Form'
+    value: 'Reset Form',
   }
 ```
 
