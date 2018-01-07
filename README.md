@@ -3,7 +3,7 @@ A quick and basic way to generate dynamic forms in HTML with Node.
 Currently only provides basic support for 'text', 'email', 'password', 'hidden', 'select', 'label', 'reset', and 'submit', elements, and renders the html string to the console.
 
 ## Usage (Production)
-**Production build only, see contributing for development instructions.**
+**Production build only, see contributing.md for development instructions.**
 1. Ensure you have Node/NPM installed and clone this repo and cd into it.
 2. Run `npm install --production`.
 3. In your project, be sure to import FormBuilder. `let FormBuilder = require('./FormBuilder.js');`
