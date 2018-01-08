@@ -12,3 +12,6 @@ editor such as Atom and add the linter-eslint package:
 5. Before submitting changes, ensure your code passes a lint test by running
 `mocha`.
 6. Submit a pull request for review, referencing your changes.
+
+## Testing
+We use CircleCI within the repository to ensure code is passing.
